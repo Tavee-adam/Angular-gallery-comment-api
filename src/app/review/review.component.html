@@ -1,0 +1,43 @@
+<div class="reviewTopic"><h3 id="topicText">Leave a Review</h3></div>
+
+<section class="mainSection">
+  <!-- topic section -->
+
+  <section class="topicSection">
+    <div class="image">
+      <img
+        src="{{ imageFromNet }}"
+        alt="{{ imageAlt }}"
+        class="imageSelf"
+        width="700"
+      />
+     
+    </div>
+  </section>
+
+  <!-- review form section -->
+  <section class="reviewSection">
+    <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" class="formReview">
+      <div class="reviewContent">
+        <label for="fullname">Fullname </label>
+        <input type="text" formControlName="fullname" id="fullname" />
+      </div>
+      <div class="reviewContent">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" id="email" />
+      </div>
+      <div class="reviewContent">
+        <label for="review">Review</label>
+        <textarea
+          formControlName="review"
+          id="review"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="reviewContent">
+        <button type="submit" click>Send</button>
+      </div>
+    </form>
+  </section>
+</section>

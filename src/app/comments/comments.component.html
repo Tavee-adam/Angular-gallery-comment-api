@@ -1,0 +1,27 @@
+<div class="reviewTopic"><h3 id="topicText">What peopel say about us</h3></div>
+
+<section>
+  <section class="topicSection">
+    <div class="image">
+      <img
+        src="{{ imageFromNet }}"
+        alt="{{ imageAlt }}"
+        class="imageSelf"
+        width="700"
+      />
+      <div class="credit"><a id="imageCredit">Cr. Mikhail Nilov</a></div>
+    </div>
+  </section>
+
+  <section class="readComment">
+    <div class="wrapperEachComment" *ngFor="let item of commentlist">
+      <div class="commentCore">
+        <h2>{{ item.review }}</h2>
+      </div>
+      <div class="commentAuther">
+        <span>reviewer :</span>
+        {{ item.fullname | uppercase }}
+      </div>
+    </div>
+  </section>
+</section>
